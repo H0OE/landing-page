@@ -1,0 +1,125 @@
+.logo {
+  width: 3rem;
+  fill: whitesmoke;
+
+}
+
+.mobile {
+  display: none;
+}
+
+.desktop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .end.mini {
+    display: none;
+  }
+
+  @media screen and (max-width: 660px) {
+
+    .logo {
+      min-width: 1rem;
+    }
+
+    .end.full {
+      display: none !important;
+    }
+
+    .end.mini {
+      display: block !important;
+    }
+  }
+}
+
+@media screen and (max-width: 545px) {
+
+  .desktop {
+    display: none !important;
+  }
+
+  .mobile {
+    display: block !important;
+  }
+}
+
+
+.image {
+  height: max-content;
+
+  .back {
+    width: 100%;
+    height: 50vh;
+    opacity: 0.7;
+    position: relative;
+    text-align: center;
+    object-fit: fill;
+  }
+
+  .left{
+      position: absolute;
+      top: 25%;
+      left: 1rem;
+      text-align: center;
+      font-size: 12vh;
+  }
+
+  .right{
+      position: absolute;
+      top: 25%;
+      right: 3rem;
+      text-align: center;
+      height: 50%;
+  }
+
+  @media screen and (max-width: 660px) {
+
+    .right {
+      display: none !important;
+    }
+
+    .left {
+      font-size: 6vh;
+    }
+
+  }
+
+  position: relative;
+  text-align: center;
+}
+
+.items{
+    display: grid;
+    grid-auto-columns: 40rem;
+    grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
+    height: 50%;
+  
+
+  .item {
+    text-align: center;
+
+  }
+
+  ion-content {
+
+    --ion-background-color: rgb(76, 78, 81);
+  }
+
+}
+
+ion-button {
+  --box-shadow: none !important;
+}

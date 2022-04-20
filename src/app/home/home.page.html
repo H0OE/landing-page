@@ -1,0 +1,107 @@
+<ion-header [translucent]="true" color="light">
+  <ion-toolbar class="mobile" color="light">
+    <ion-title class="logo" slot="start">
+      <ion-icon icon="../../assets/icon/carlos.svg"></ion-icon>
+      Carlos
+    </ion-title>
+    <ion-title class="more" slot="end">
+      <ion-button id="hover-more-mobile" color="light">Mas</ion-button>
+    </ion-title>
+    <ion-popover trigger="hover-more-mobile">
+      <ng-template>
+        <ion-content>
+          <div class="links">
+            <ion-button expand="block" id="hover-more" color="light">
+              <ion-router-link color="dark" href="#">Nosotros</ion-router-link>
+
+            </ion-button>
+
+            <ion-button expand="block" id="hover-more" color="light">
+              <ion-router-link color="dark" href="#">Contactanos</ion-router-link>
+
+            </ion-button>
+
+            <ion-button expand="block" id="hover-more" color="light">
+              <ion-router-link color="dark" href="#">Servicios</ion-router-link>
+
+            </ion-button>
+
+            <ion-button expand="block" id="hover-more" color="light">
+              <ion-router-link color="dark" href="#">Comprar</ion-router-link>
+
+            </ion-button>
+          </div>
+        </ion-content>
+      </ng-template>
+    </ion-popover>
+  </ion-toolbar>
+
+  <ion-toolbar class="desktop" color="light">
+    <ion-title class="logo" slot="start">
+      <ion-icon icon="../../assets/icon/carlos.svg"></ion-icon>
+      Carlos
+    </ion-title>
+    <ion-title class="end full" slot="end">
+      <ion-button color="light">
+        <ion-router-link color="dark" href="#">Comprar</ion-router-link>
+      </ion-button>
+    </ion-title>
+
+    <ion-title class="end mini" slot="end">
+      <ion-button id="hover-more-desktop" color="light">
+        <ion-router-link color="dark">Mas</ion-router-link>
+      </ion-button>
+      <ion-popover trigger="hover-more-desktop">
+        <ng-template>
+          <ion-content>
+            <div class="links">
+              <ion-button expand="block" id="hover-more" color="light">
+                <ion-router-link color="dark" href="#">Comprar</ion-router-link>
+              </ion-button>
+            </div>
+          </ion-content>
+        </ng-template>
+      </ion-popover>
+
+    </ion-title>
+
+    <div class="center">
+      <ion-button color="light">
+        <ion-router-link color="dark" href="#">Nosotros</ion-router-link>
+      </ion-button>
+      <ion-button color="light">
+        <ion-router-link color="dark" href="#">Contactanos</ion-router-link>
+      </ion-button>
+      <ion-button color="light">
+        <ion-router-link color="dark" href="#">Servicios</ion-router-link>
+      </ion-button>
+
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="image">
+    <ion-img class="back" cache src="../../assets/cookie.jpg"></ion-img>
+    <ion-title  class="left">Galletas!!! <br> Carlos</ion-title>
+    <ion-img class="right" cache src="../../assets/hormiga.png"></ion-img>
+
+  </div>
+
+
+  <div class="items" color="dark">
+    <div *ngFor="let card of cards" class="item">
+      <ion-card color="light">
+        <ion-card-header>
+          <ion-card-subtitle>{{card.subtitle}}</ion-card-subtitle>
+          <ion-card-title>{{card.title}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{card.description}}
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+
+
+</ion-content>
